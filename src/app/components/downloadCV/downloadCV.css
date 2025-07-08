@@ -1,0 +1,22 @@
+.download {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.download-link {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 12px;
+    display: inline-block;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    color: #8c8c8e;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,33 @@
+.info-scrollbar {
+    padding: 215px 0 50px;
+    overflow: scroll;
+    height: 63vh;
+    scrollbar-width: none;
+}
+
+.info-scrollbar .MuiBox-root .MuiBox-root .MuiTypography-root {
+  color: var(--secondary);
+}
+
+.ls-divider {
+    background: #646466;
+    width: 100%;
+    height: 1px;
+    opacity: .3;
+}
+
+.infoTable {
+    color: #8c8c8e;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}

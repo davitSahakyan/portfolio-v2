@@ -1,0 +1,49 @@
+.main-content {
+  padding-left: 340px;
+  height: auto;
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 30px);
+  padding-right: 20px;
+  transition: 0.55s ease-in-out;
+}
+
+.top-background {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 320px;
+  overflow: hidden;
+  position: absolute;
+  background-position: 50%;
+  height: 400px;
+  background-size: cover;
+}
+
+.top-background-overlay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    180deg,
+    rgba(30, 30, 40, 0.93),
+    rgba(30, 30, 40, 0.96) 70%,
+    rgba(30, 30, 40, 0.99) 80%,
+    #1e1e28
+  );
+}
+
+.content-scrollbar {
+  width: 100%;
+  height: auto;
+}
+
+.section-container {
+  padding: 5px 10px;
+}
+
+.bio-info {
+  display: flex;
+  justify-content: space-around;
+}

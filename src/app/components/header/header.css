@@ -1,0 +1,32 @@
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    width: 100%;
+    padding: 30px;
+    height: 155px;
+    background: linear-gradient(159deg, rgba(37, 37, 50, .98), rgba(35, 35, 45, .98));
+    text-align: center;
+    box-shadow: 0 1px 4px 0 rgba(15, 15, 20, .1);
+    width: -webkit-fill-available;
+}
+
+.dav-name {
+    color: #fafafc;
+    transition: .4s ease-in-out;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto 15px;
+}
+
+.avatar img {
+    height: 135px;
+    z-index: 0;
+    clip-path: circle(40.3% at 49% 40%);
+}

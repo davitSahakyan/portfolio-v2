@@ -1,0 +1,8 @@
+.css-18w7uxr-MuiSvgIcon-root {
+    fill: var(--yellow) !important;
+    margin-right: 10px;
+}
+
+.knowlageList-container ul li{
+    justify-content: flex-start;
+}

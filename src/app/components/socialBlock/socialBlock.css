@@ -1,0 +1,27 @@
+.socialBlock-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    height: 50px;
+    background: linear-gradient(159deg, rgba(37, 37, 50, .98), rgba(35, 35, 45, .98));
+    position: absolute;
+    bottom: 5px;
+    box-shadow: 0 1px 4px 0 rgba(15, 15, 20, .1);
+    left: 5px;
+    width: 240px;
+    z-index: 999;
+}
+
+.socialBlock-container a {
+    color: #8c8c8e;
+    transition: .2s ease-in-out;
+}
+
+.socialBlock-container .linkedIn:hover {
+    color: var(--blue);
+}
+
+.socialBlock-container .github:hover {
+    color: var(--white);
+}

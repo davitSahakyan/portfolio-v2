@@ -1,0 +1,23 @@
+.column-info-container {
+    width: 50%;
+}
+
+.column-info-heading {
+    align-self: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-item-content {
+    position: relative;
+    margin-right: 45px;
+    background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+    padding: 30px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+    box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+}
