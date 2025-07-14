@@ -2,15 +2,15 @@ import { ColumnInfoItem } from "@/app/interfaces/interfaces";
 import { createClient } from 'contentful';
 
 const space = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID;
-const accessToken = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN;
+const accessToke = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN;
 
-if (!space || !accessToken) {
+if (!space || !accessToke) {
   throw new Error('Contentful space ID and access token must be defined in environment variables.');
 }
 
 export const client = createClient({
   space,
-  accessToken,
+  accessToken: accessToke,
 });
 
 export async function getEducationData() {
