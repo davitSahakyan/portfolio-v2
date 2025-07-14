@@ -1,6 +1,7 @@
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import './socialBlock.css'
+import Image from "next/image";
 
 
 interface IData {
@@ -45,7 +46,7 @@ const SocialBlock = () => {
     <div className="socialBlock-container">
       {
         data.map(({Icon, url, iconUrl, customClass}) => {
-            return <a key={url} target="_blank" href={url} className={customClass}> {Icon ? <Icon /> : <img width={23} src={iconUrl}/>}</a>
+            return <a key={url} target="_blank" href={url} className={customClass}> {Icon ? <Icon /> : <Image width={23} src={iconUrl} alt='social'/>}</a>
         })
       }
     </div>
