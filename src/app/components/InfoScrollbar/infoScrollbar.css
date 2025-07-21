@@ -1,7 +1,6 @@
 .info-scrollbar {
-    padding: 215px 0 50px;
+    padding: 15px 0 50px;
     overflow: scroll;
-    height: 63vh;
     scrollbar-width: none;
 }
 

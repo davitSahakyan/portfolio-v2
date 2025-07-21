@@ -2,7 +2,7 @@
     background: #20202a;
     width: 290px;
     min-width: 290px;
-    height: calc(100vh - 30px);
+    height: calc(100vh - 5px);
     position: fixed;
     z-index: 999;
     box-shadow: 0 3px 8px 0 rgba(15, 15, 20, .2);

@@ -1,10 +1,9 @@
 .dav-app {
-    padding: 5px;
-    background: #191923;
+    background: var(--background);
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .app-wrapper {
@@ -21,7 +20,10 @@
 }
 
 .app-container {
+    height: 100vh;
     position: relative;
     display: flex;
     flex-wrap: nowrap;
+    overflow: auto;
+    scrollbar-width: none;
 }
