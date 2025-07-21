@@ -1,17 +1,8 @@
-/* .css-18x04i7-MuiCircularProgress-root {
-    color: var(--yellow) !important;
-    width: 55px !important;
-    height: 55px !important;
-}
-
-.css-mlv3xz-MuiTypography-root {
-    color: #8c8c8e !important;
-} */
 
 .css-atovpb-MuiTypography-root {
     color: #8c8c8e !important;
 }
 
-.css-hud6bj-MuiLinearProgress-bar1 {
+.MuiLinearProgress-bar.MuiLinearProgress-barColorPrimary {
     background-color: var(--yellow) !important;
 }

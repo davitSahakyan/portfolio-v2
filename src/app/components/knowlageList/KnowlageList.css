@@ -1,5 +1,5 @@
-.css-18w7uxr-MuiSvgIcon-root {
-    fill: var(--yellow) !important;
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeSmall {
+    fill: var(--yellow);
     margin-right: 10px;
 }
 

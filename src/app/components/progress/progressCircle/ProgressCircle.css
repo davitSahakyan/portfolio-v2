@@ -1,4 +1,4 @@
-.css-18x04i7-MuiCircularProgress-root {
+.lang-skills-item .MuiCircularProgress-root.MuiCircularProgress-determinate.MuiCircularProgress-colorPrimary{
     color: var(--yellow) !important;
     width: 55px !important;
     height: 55px !important;
