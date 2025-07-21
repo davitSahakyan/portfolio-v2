@@ -1,8 +1,4 @@
 .header {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 99999;
     width: 100%;
     padding: 30px;
     height: 155px;
@@ -25,8 +21,7 @@
     margin: 0 auto 15px;
 }
 
-.avatar img {
-    height: 135px;
+.avatar-img {
     z-index: 0;
     clip-path: circle(40.3% at 49% 40%);
 }
