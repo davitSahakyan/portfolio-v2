@@ -47,3 +47,21 @@
   display: flex;
   justify-content: space-around;
 }
+
+@media (min-width: 375px) and (max-width: 1023px) {
+  .main-content {
+    padding-left: 0;
+    height: auto;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .bio-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top-background {
+    display: none;
+  }
+}

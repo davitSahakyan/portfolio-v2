@@ -25,3 +25,13 @@
 .socialBlock-container .github:hover {
     color: var(--white);
 }
+
+@media (min-width: 375px) and (max-width: 1023px) {
+    .socialBlock-container {
+        padding: 0;
+        width: 100%;
+        margin-bottom: 20px;
+        position: unset;
+        justify-content: space-around;
+    }
+}

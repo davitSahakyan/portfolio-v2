@@ -73,3 +73,9 @@
     background-color: var(--background);
     width: 5px;
 }
+
+@media (min-width: 375px) and (max-width: 1023px) {
+    .column-info-container {
+        width: 100%;
+    }
+}

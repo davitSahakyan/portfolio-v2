@@ -1,10 +1,26 @@
 .info-bar {
     background: #20202a;
     width: 290px;
+    padding-left: 15px;
+    padding-right: 15px;
     min-width: 290px;
     height: calc(100vh - 5px);
     position: fixed;
     z-index: 999;
     box-shadow: 0 3px 8px 0 rgba(15, 15, 20, .2);
     transition: .55s ease-in-out;
+}
+
+@media (min-width: 375px) and (max-width: 1023px) {
+    .info-bar {
+        background: #20202a;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        min-width: 290px;
+        height: calc(100vh - 5px);
+        box-shadow: 0 3px 8px 0 rgba(15, 15, 20, .2);
+        transition: .55s ease-in-out;
+        position: unset;
+    }
 }

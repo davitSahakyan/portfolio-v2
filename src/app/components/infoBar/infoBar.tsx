@@ -7,12 +7,12 @@ function InfoBar() {
 
   return (
     <>
-      <div className="info-bar pr-15 pl-15">
+      <div className="info-bar">
         <div className="info-bar-frame pr-15 pl-15">
             <Header />
             <InfoScrollbar />
             <SocialBlock />
-        </div> 
+        </div>
       </div>
     </>
   )
