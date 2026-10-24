@@ -18,7 +18,6 @@ export const wedding = {
   greeting: {
     formal: 'Հարգելի',
     warm: 'Սիրելի',
-    generic: 'Սիրելի հյուրեր',
   },
   heroKicker: 'Մենք ամուսնանում ենք',
   invitationText: 'Սիրով հրավիրում ենք Ձեզ մեր հարսանեկան արարողությանը։',

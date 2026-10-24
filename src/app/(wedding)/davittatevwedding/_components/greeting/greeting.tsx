@@ -5,7 +5,7 @@ import './greeting.css';
 
 type GreetingProps = {
   greeting: string | null;
-  recipient: string;
+  recipient?: string;
 };
 
 function Greeting({ greeting, recipient }: GreetingProps) {
@@ -14,7 +14,7 @@ function Greeting({ greeting, recipient }: GreetingProps) {
       <Reveal>
         <Ornament />
         {greeting && <p className="wd-greeting__word">{greeting}</p>}
-        <h2 className="wd-greeting__name">{recipient}</h2>
+        {recipient && <h2 className="wd-greeting__name">{recipient}</h2>}
         <p className="wd-greeting__text">{wedding.invitationText}</p>
         <p className="wd-greeting__note">{wedding.invitationNote}</p>
       </Reveal>

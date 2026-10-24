@@ -5,7 +5,7 @@ import './envelope.css';
 
 type EnvelopeProps = {
   greeting: string | null;
-  recipient: string;
+  recipient?: string;
   initials: string;
   date: string;
   musicSrc: string;
@@ -84,7 +84,7 @@ function Envelope({ greeting, recipient, initials, date, musicSrc }: EnvelopePro
           <div className="wd-intro__address">
             <p className="wd-intro__kicker">Հրավեր</p>
             {greeting && <p className="wd-intro__word">{greeting}</p>}
-            <p className="wd-intro__name">{recipient}</p>
+            {recipient && <p className="wd-intro__name">{recipient}</p>}
           </div>
 
           <div className="wd-envelope" onClick={open} aria-hidden="true">

@@ -20,11 +20,6 @@
   overflow-wrap: anywhere;
 }
 
-/* generic invitation has no greeting word above the name */
-svg + .wd-greeting__name {
-  margin-top: 28px;
-}
-
 .wd-greeting__text {
   max-width: 340px;
   margin: 28px auto 0;

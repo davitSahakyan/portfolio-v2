@@ -15,20 +15,19 @@ type InvitationProps = {
 
 function Invitation({ guestName, warm = false }: InvitationProps) {
   const greeting = guestName ? greetingWord(warm) : null;
-  const recipient = guestName || wedding.greeting.generic;
 
   return (
     <>
       <Envelope
         greeting={greeting}
-        recipient={recipient}
+        recipient={guestName}
         initials={wedding.initials}
         date={wedding.date.short}
         musicSrc={wedding.musicSrc}
       />
       <main className="wd-page">
         <Hero />
-        <Greeting greeting={greeting} recipient={recipient} />
+        <Greeting greeting={greeting} recipient={guestName} />
         <Calendar />
         <Schedule />
         <Countdown target={wedding.countdownTarget} />

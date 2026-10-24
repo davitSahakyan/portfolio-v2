@@ -19,8 +19,9 @@ const COLORS = {
 };
 
 // Link preview: guest name on the left, couple photo on the right (420x630 = the photo's 2:3 ratio).
+// Without a guest name the couple's names take the headline instead.
 // Re-encoded as JPEG because WhatsApp skips preview images over ~300KB and the PNG is ~400KB.
-export async function renderInviteImage(recipient: string) {
+export async function renderInviteImage(recipient?: string) {
   const png = await (await renderInvitePng(recipient)).arrayBuffer();
 
   try {
@@ -38,7 +39,7 @@ export async function renderInviteImage(recipient: string) {
   }
 }
 
-async function renderInvitePng(recipient: string) {
+async function renderInvitePng(recipient?: string) {
   const [serif, serifSemiBold, latin, latinItalic, photo] = await Promise.all([
     readFile(join(OG_DIR, 'fonts/NotoSerifArmenian-Regular.ttf')),
     readFile(join(OG_DIR, 'fonts/NotoSerifArmenian-SemiBold.ttf')),
@@ -48,7 +49,15 @@ async function renderInvitePng(recipient: string) {
   ]);
   const photoSrc = `data:image/jpeg;base64,${photo.toString('base64')}`;
   const [first, second] = wedding.names;
-  const nameSize = recipient.length > 34 ? 46 : recipient.length > 20 ? 56 : 66;
+  const nameSize = !recipient || recipient.length <= 20 ? 66 : recipient.length > 34 ? 46 : 56;
+
+  const couple = (fontSize: number, fontWeight: 400 | 600, color: string) => (
+    <div style={{ display: 'flex', alignItems: 'baseline', marginTop: 30, fontFamily: 'Serif', fontSize, fontWeight, color }}>
+      {first}
+      <span style={{ fontFamily: 'Latin', fontStyle: 'italic', margin: '0 14px', color: COLORS.gold }}>&amp;</span>
+      {second}
+    </div>
+  );
 
   return new ImageResponse(
     (
@@ -72,18 +81,22 @@ async function renderInvitePng(recipient: string) {
           <div style={{ fontFamily: 'Serif', fontSize: 24, letterSpacing: 8, color: COLORS.gold }}>
             ՀԱՐՍԱՆՅԱՑ ՀՐԱՎԵՐ
           </div>
-          <div
-            style={{
-              marginTop: 30,
-              fontFamily: 'Serif',
-              fontWeight: 600,
-              fontSize: nameSize,
-              lineHeight: 1.2,
-              color: COLORS.terracottaDeep,
-            }}
-          >
-            {recipient}
-          </div>
+          {recipient ? (
+            <div
+              style={{
+                marginTop: 30,
+                fontFamily: 'Serif',
+                fontWeight: 600,
+                fontSize: nameSize,
+                lineHeight: 1.2,
+                color: COLORS.terracottaDeep,
+              }}
+            >
+              {recipient}
+            </div>
+          ) : (
+            couple(nameSize, 600, COLORS.terracottaDeep)
+          )}
           <div style={{ display: 'flex', alignItems: 'center', marginTop: 34 }}>
             <div style={{ width: 80, height: 2, background: COLORS.gold }} />
             <div
@@ -97,25 +110,10 @@ async function renderInvitePng(recipient: string) {
             />
             <div style={{ width: 80, height: 2, background: COLORS.gold }} />
           </div>
+          {recipient && couple(40, 400, COLORS.terracotta)}
           <div
             style={{
-              display: 'flex',
-              alignItems: 'baseline',
-              marginTop: 30,
-              fontFamily: 'Serif',
-              fontSize: 40,
-              color: COLORS.terracotta,
-            }}
-          >
-            {first}
-            <span style={{ fontFamily: 'Latin', fontStyle: 'italic', margin: '0 14px', color: COLORS.gold }}>
-              &amp;
-            </span>
-            {second}
-          </div>
-          <div
-            style={{
-              marginTop: 16,
+              marginTop: recipient ? 16 : 30,
               fontFamily: 'Serif',
               fontSize: 28,
               letterSpacing: 6,
