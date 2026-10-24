@@ -35,7 +35,7 @@ export const wedding = {
     },
     {
       icon: 'rings',
-      time: '17:20',
+      time: '17:00',
       title: 'Հարսանյաց հանդիսություն',
       place: '«Լիաննա Գարդեն Հոլլ»',
       location: 'Մեծ դահլիճ',
