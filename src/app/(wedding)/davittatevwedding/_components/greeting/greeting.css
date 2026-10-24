@@ -1,0 +1,40 @@
+.wd-greeting {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.wd-greeting__word {
+  margin-top: 28px;
+  font-size: 13px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--wd-muted);
+}
+
+.wd-greeting__name {
+  margin-top: 8px;
+  font-size: clamp(28px, 8.4vw, 38px);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--wd-terracotta-deep);
+  overflow-wrap: anywhere;
+}
+
+/* generic invitation has no greeting word above the name */
+svg + .wd-greeting__name {
+  margin-top: 28px;
+}
+
+.wd-greeting__text {
+  max-width: 340px;
+  margin: 28px auto 0;
+  font-size: 19px;
+  line-height: 1.55;
+}
+
+.wd-greeting__note {
+  max-width: 320px;
+  margin: 18px auto 0;
+  font-size: 15px;
+  color: var(--wd-muted);
+}

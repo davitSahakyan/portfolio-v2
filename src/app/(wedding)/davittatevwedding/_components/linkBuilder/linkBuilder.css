@@ -1,0 +1,137 @@
+.wd-links {
+  max-width: var(--wd-page-width);
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: 32px 16px calc(48px + env(safe-area-inset-bottom));
+  background: var(--wd-cream);
+}
+
+.wd-links__title {
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--wd-terracotta-deep);
+}
+
+.wd-links__hint {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--wd-muted);
+}
+
+.wd-links__input {
+  display: block;
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  /* 16px+ stops iOS from zooming into the field */
+  font: inherit;
+  font-size: 17px;
+  color: var(--wd-ink);
+  background: var(--wd-paper);
+  border: 1px solid var(--wd-line);
+  border-radius: 14px;
+  resize: vertical;
+}
+
+.wd-links__input:focus {
+  outline: 2px solid var(--wd-terracotta);
+  outline-offset: 1px;
+}
+
+.wd-links__count {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--wd-muted);
+}
+
+.wd-links__list {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wd-links__item {
+  margin-top: 12px;
+  padding: 14px;
+  background: var(--wd-paper);
+  border: 1px solid var(--wd-line);
+  border-radius: 16px;
+}
+
+.wd-links__item.is-sent {
+  background: #f3eadf;
+}
+
+.wd-links__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.wd-links__name {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--wd-terracotta-deep);
+}
+
+.wd-links__warm {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--wd-muted);
+}
+
+.wd-links__warm input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--wd-terracotta);
+}
+
+.wd-links__url {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--wd-muted);
+  word-break: break-all;
+}
+
+.wd-links__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.wd-links__btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  font-size: 14px;
+  color: var(--wd-terracotta-deep);
+  background: transparent;
+  border: 1px solid var(--wd-line);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.wd-links__btn--primary {
+  color: var(--wd-paper);
+  background: var(--wd-terracotta-deep);
+  border-color: var(--wd-terracotta-deep);
+}
+
+.wd-links__reset {
+  margin-top: 24px;
+  padding: 0;
+  font-size: 13px;
+  color: var(--wd-muted);
+  text-decoration: underline;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}

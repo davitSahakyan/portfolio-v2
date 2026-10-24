@@ -1,0 +1,40 @@
+.wd-closing {
+  padding-bottom: calc(96px + env(safe-area-inset-bottom));
+}
+
+.wd-closing__text {
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--wd-terracotta-deep);
+}
+
+.wd-closing__ornament {
+  margin-top: 28px;
+}
+
+.wd-closing__with-love {
+  margin-top: 28px;
+  font-size: 15px;
+  color: var(--wd-muted);
+}
+
+.wd-closing__names {
+  margin-top: 6px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.wd-closing__names span {
+  font-family: var(--wd-latin);
+  font-style: italic;
+  color: var(--wd-gold);
+}
+
+.wd-closing__date {
+  margin-top: 14px;
+  font-family: var(--wd-latin);
+  font-size: 17px;
+  letter-spacing: 0.24em;
+  color: var(--wd-muted);
+}

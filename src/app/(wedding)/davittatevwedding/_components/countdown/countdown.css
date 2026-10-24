@@ -1,0 +1,44 @@
+.wd-countdown {
+  color: var(--wd-paper);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 250, 244, 0.18), transparent 60%),
+    var(--wd-terracotta);
+}
+
+.wd-countdown__title {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.wd-countdown__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 380px;
+  margin: 28px auto 0;
+}
+
+.wd-countdown__tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px 0 12px;
+  border: 1px solid rgba(255, 250, 244, 0.35);
+  border-radius: 16px;
+  background: rgba(255, 250, 244, 0.1);
+}
+
+.wd-countdown__value {
+  font-family: var(--wd-latin);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.wd-countdown__label {
+  margin-top: 8px;
+  font-size: 11px;
+  opacity: 0.85;
+}

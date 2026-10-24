@@ -1,0 +1,82 @@
+.wd-calendar__month {
+  margin-top: 12px;
+}
+
+.wd-calendar__year {
+  font-family: var(--wd-latin);
+  font-size: 20px;
+  letter-spacing: 0.3em;
+  color: var(--wd-gold);
+}
+
+.wd-calendar__card {
+  max-width: 360px;
+  margin: 28px auto 0;
+  padding: 18px 12px 14px;
+  background: var(--wd-paper);
+  border: 1px solid var(--wd-line);
+  border-radius: var(--wd-radius);
+  box-shadow: var(--wd-shadow);
+}
+
+.wd-calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 4px;
+}
+
+.wd-calendar__weekdays {
+  margin-bottom: 8px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--wd-line);
+  font-size: 11px;
+  color: var(--wd-muted);
+}
+
+.wd-calendar__day {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 40px;
+  font-family: var(--wd-latin);
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--wd-ink);
+}
+
+.wd-calendar__day--active {
+  color: var(--wd-paper);
+}
+
+.wd-calendar__day--active svg {
+  position: absolute;
+  width: 40px;
+  height: 36px;
+  fill: var(--wd-terracotta);
+  animation: wd-calendar-beat 1.8s ease-in-out infinite;
+}
+
+.wd-calendar__day--active span {
+  position: relative;
+  margin-top: -2px;
+  font-weight: 600;
+}
+
+@keyframes wd-calendar-beat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.12);
+  }
+  30% {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wd-calendar__day--active svg {
+    animation: none;
+  }
+}

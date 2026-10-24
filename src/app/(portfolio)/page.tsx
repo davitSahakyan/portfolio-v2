@@ -1,7 +1,7 @@
-import InfoBar from './components/infoBar/infoBar';
-import MainContent from './components/mainContent/mainContent';
+import InfoBar from '../components/infoBar/infoBar';
+import MainContent from '../components/mainContent/mainContent';
 // import MenuBar from '../../components/menuBar/menuBar';
-import './Main.css';
+import '../Main.css';
 
 function App() {
   return (
